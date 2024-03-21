@@ -2,8 +2,10 @@
 Godot in-app review plugin enables access to Google Play Store's in-app review functionality.
 
 ## ![](inappreview/addon_template/icon.png?raw=true) Prerequisites
-Follow instructions on the following page to create a custom Android build
-- [Create custom Android build](https://docs.godotengine.org/en/stable/tutorials/export/android_custom_build.html)
+Follow instructions on the following page to create a custom Android gradle build
+- [Create custom Android gradle build](https://docs.godotengine.org/en/stable/tutorials/export/android_gradle_build.html)
+
+- Create an `addons` directory in your project's root level.
 
 Upgrade your target Android SDK version to 33 via `Project->Export...->Android->Target SDK`
 
