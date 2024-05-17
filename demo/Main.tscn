@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bvb3ltmpkaso3"]
 
 [ext_resource type="Script" path="res://Main.gd" id="1_ut41m"]
-[ext_resource type="Script" path="res://addons/GodotAndroidInappReviewPlugin/InappReview.gd" id="2_0jlfk"]
+[ext_resource type="Script" path="res://addons/InappReviewPlugin/InappReview.gd" id="2_0jlfk"]
 [ext_resource type="Texture2D" uid="uid://6qdyphobnjeh" path="res://inappreview.png" id="2_cgov0"]
 
 [node name="Main" type="Node"]
@@ -36,6 +36,7 @@ layout_mode = 2
 theme_override_constants/separation = 10
 
 [node name="Button" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(375, 0)
 layout_mode = 2
 text = "Launch Review"
 

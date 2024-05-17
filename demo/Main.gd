@@ -1,3 +1,7 @@
+#
+# © 2024-present https://github.com/cengiz-pz
+#
+
 extends Node
 
 @onready var inapp_review: InappReview = $InappReview as InappReview
@@ -9,7 +13,8 @@ func _on_button_pressed() -> void:
 
 
 func _on_inapp_review_review_info_generated() -> void:
-	_print_to_screen("In-app review info generation success!  Launching review flow...")
+	_print_to_screen("In-app review info generation success!")
+	_print_to_screen("Launching review flow...")
 	inapp_review.launch_review_flow()
 
 

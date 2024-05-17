@@ -1,3 +1,7 @@
+#
+# © 2024-present https://github.com/cengiz-pz
+#
+
 @tool
 extends EditorPlugin
 
@@ -5,6 +9,7 @@ const PLUGIN_NODE_TYPE_NAME = "InappReview"
 const PLUGIN_PARENT_NODE_TYPE = "Node"
 const PLUGIN_NAME: String = "@pluginName@"
 const PLUGIN_VERSION: String = "@pluginVersion@"
+const PLUGIN_DEPENDENCIES: Array = [ @pluginDependencies@ ]
 
 var export_plugin: AndroidExportPlugin
 
@@ -43,7 +48,4 @@ class AndroidExportPlugin extends EditorExportPlugin:
 
 
 	func _get_android_dependencies(platform: EditorExportPlatform, debug: bool) -> PackedStringArray:
-		return PackedStringArray([
-			"com.google.android.play:core:1.10.3",
-			"androidx.appcompat:appcompat:1.6.1"
-		])
+		return PackedStringArray(PLUGIN_DEPENDENCIES)

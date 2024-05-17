@@ -1,13 +1,15 @@
+
+---
 # ![](inappreview/addon_template/icon.png?raw=true) In-app Review Plugin
-Godot in-app review plugin enables access to Google Play Store's in-app review functionality.
+Godot in-app review plugin enables access to Google Play Store's in-app review functionality on the Android platform.
+
+_For iOS App Store version, visit https://github.com/cengiz-pz/godot-ios-inapp-review-plugin ._
 
 ## ![](inappreview/addon_template/icon.png?raw=true) Prerequisites
 Follow instructions on the following page to create a custom Android gradle build
 - [Create custom Android gradle build](https://docs.godotengine.org/en/stable/tutorials/export/android_gradle_build.html)
 
-- Create an `addons` directory in your project's root level.
-
-Upgrade your target Android SDK version to 33 via `Project->Export...->Android->Target SDK`
+Your app must be registered with and released on Google Play Store.
 
 ## ![](inappreview/addon_template/icon.png?raw=true) Installation
 There are 2 ways to install the `In-app Review` plugin into your project:
@@ -19,22 +21,22 @@ Steps:
 - search for and select the `In-app Review` plugin in Godot Editor
 - click `Download` button
 - on the installation dialog...
-  - click `Change Install Folder` button and select your project's `addons` directory
-  - uncheck `Ignore asset root` checkbox
-  - click `Install` button
+	- keep `Change Install Folder` setting pointing to your project's root directory
+	- keep `Ignore asset root` checkbox checked
+	- click `Install` button
 - enable the plugin via the `Plugins` tab of `Project->Project Settings...` menu, in the Godot Editor
 
 ### ![](inappreview/addon_template/icon.png?raw=true) Installing manually
 Steps:
 - download release archive from Github
 - unzip the release archive
-- copy to your Godot project's `addons` directory
+- copy to your Godot project's root directory
 - enable the plugin via the `Plugins` tab of `Project->Project Settings...` menu, in the Godot Editor
 
 ## ![](inappreview/addon_template/icon.png?raw=true) Usage
 Add an `InappReview` node to your scene and follow the following steps:
 - register listeners for the following signals emitted from the `InappReview` node
-    - `review_info_generated`
+	- `review_info_generated`
 	- `review_info_generation_failed`
 	- `review_flow_launched`
 	- `review_flow_launch_failed`
@@ -43,6 +45,9 @@ Add an `InappReview` node to your scene and follow the following steps:
 	- Google Play Store API will display a dialog
 	- Dialog may not be displayed if the review flow was launched recently
 - normal app functionality can resume when `review_flow_launched` signal is received
+
+## ![](inappreview/addon_template/icon.png?raw=true) Demo
+The demo app's only purpose is to provide sample code. Since the demo app is not registered with the Google Play store, the Google Play in-app review dialog will not be displayed.
 
 ## ![](inappreview/addon_template/icon.png?raw=true) Troubleshooting
 `adb logcat` is one of the best tools for troubleshooting unexpected behavior
@@ -54,3 +59,10 @@ Add an `InappReview` node to your scene and follow the following steps:
 
 Also check out:
 https://docs.godotengine.org/en/stable/tutorials/platform/android/android_plugin.html#troubleshooting
+<br/><br/><br/>
+
+---
+# ![](inappreview/addon_template/icon.png?raw=true) Credits
+Developed by [Cengiz](https://github.com/cengiz-pz)
+
+Original repository: [Godot Android In-app Review Plugin](https://github.com/cengiz-pz/godot-android-inapp-review-plugin)

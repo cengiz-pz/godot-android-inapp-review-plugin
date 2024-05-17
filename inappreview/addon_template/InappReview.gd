@@ -1,3 +1,7 @@
+#
+# © 2024-present https://github.com/cengiz-pz
+#
+
 @tool
 class_name InappReview
 extends Node
@@ -44,14 +48,14 @@ func _connect_signals() -> void:
 
 func generate_review_info() -> void:
 	if _plugin_singleton != null:
-		_plugin_singleton.generateReviewInfo()
+		_plugin_singleton.generate_review_info()
 	else:
 		printerr("%s plugin not initialized" % PLUGIN_SINGLETON_NAME)
 
 
 func launch_review_flow() -> void:
 	if _plugin_singleton != null:
-		_plugin_singleton.launchReviewFlow()
+		_plugin_singleton.launch_review_flow()
 	else:
 		printerr("%s plugin not initialized" % PLUGIN_SINGLETON_NAME)
 

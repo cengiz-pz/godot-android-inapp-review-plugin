@@ -1,3 +1,7 @@
+//
+// © 2024-present https://github.com/cengiz-pz
+//
+
 pluginManagement {
     repositories {
         gradlePluginPortal()
@@ -14,6 +18,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "godot_android_inapp_review_plugin"
+rootProject.name = "godot-android-inapp-review-plugin"
 
 include(":inappreview")
