@@ -13,24 +13,24 @@ plugins {
 val pluginName = "InappReviewPlugin"
 val pluginPackageName = "org.godotengine.plugin.android.inappreview"
 val godotVersion = "4.2.2"
-val pluginVersion = "2.0"
+val pluginVersion = "2.1"
 val demoAddOnsDirectory = "../demo/addons"
 val templateDirectory = "addon_template"
 val pluginDependencies = arrayOf(
-    "com.google.android.play:core:1.10.3",
+    "com.google.android.play:review:2.0.1",
     "androidx.appcompat:appcompat:1.6.1"
 )
 
 android {
     namespace = pluginPackageName
-    compileSdk = 33
+    compileSdk = 34
 
     buildFeatures {
         buildConfig = true
     }
 
     defaultConfig {
-        minSdk = 21
+        minSdk = 24
 
         manifestPlaceholders["godotPluginName"] = pluginName
         manifestPlaceholders["godotPluginPackageName"] = pluginPackageName
