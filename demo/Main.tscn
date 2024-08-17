@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Main.gd" id="1_ut41m"]
 [ext_resource type="Script" path="res://addons/InappReviewPlugin/InappReview.gd" id="2_0jlfk"]
-[ext_resource type="Texture2D" uid="uid://6qdyphobnjeh" path="res://inappreview.png" id="2_cgov0"]
+[ext_resource type="Texture2D" uid="uid://c3qeejt2v7ixi" path="res://inappreview.png" id="2_cgov0"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_ut41m")

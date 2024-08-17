@@ -7,18 +7,18 @@ import org.apache.tools.ant.filters.ReplaceTokens
 
 plugins {
     id("com.android.library")
-    id("org.jetbrains.kotlin.android") version "1.9.23"
+    id("org.jetbrains.kotlin.android") version "2.0.10"
 }
 
 val pluginName = "InappReviewPlugin"
 val pluginPackageName = "org.godotengine.plugin.android.inappreview"
-val godotVersion = "4.2.2"
-val pluginVersion = "2.1"
+val godotVersion = "4.3.0"
+val pluginVersion = "3.0"
 val demoAddOnsDirectory = "../demo/addons"
 val templateDirectory = "addon_template"
 val pluginDependencies = arrayOf(
     "com.google.android.play:review:2.0.1",
-    "androidx.appcompat:appcompat:1.6.1"
+    "androidx.appcompat:appcompat:1.7.0"
 )
 
 android {
