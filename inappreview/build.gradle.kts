@@ -12,8 +12,8 @@ plugins {
 
 val pluginName = "InappReviewPlugin"
 val pluginPackageName = "org.godotengine.plugin.android.inappreview"
-val godotVersion = "4.3.0"
-val pluginVersion = "3.0"
+val godotVersion = "4.4.0"
+val pluginVersion = "3.1"
 val demoAddOnsDirectory = "../demo/addons"
 val templateDirectory = "addon_template"
 val pluginDependencies = arrayOf(
