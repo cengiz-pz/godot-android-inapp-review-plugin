@@ -1,0 +1,4 @@
+[submodule "addon"]
+	path = inappreview/addon_template
+	url = https://github.com/cengiz-pz/godot-inapp-review-addon.git
+	branch = main
