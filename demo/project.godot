@@ -12,8 +12,8 @@ config_version=5
 
 config/name="In-app Review Demo"
 run/main_scene="res://Main.tscn"
-config/features=PackedStringArray("4.3", "GL Compatibility")
-config/icon="res://icon.svg"
+config/features=PackedStringArray("4.4", "GL Compatibility")
+config/icon="uid://s1xune2gxtx1"
 
 [display]
 
