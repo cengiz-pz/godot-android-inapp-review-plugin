@@ -10,10 +10,12 @@ plugins {
     id("org.jetbrains.kotlin.android") version "2.0.10"
 }
 
-val pluginName = "InappReviewPlugin"
+val pluginNodeName = "InappReview"
+val pluginName = pluginNodeName + "Plugin"
 val pluginPackageName = "org.godotengine.plugin.android.inappreview"
 val godotVersion = "4.3.0"
 val pluginVersion = "3.0"
+val targetOs = "android"
 val demoAddOnsDirectory = "../demo/addons"
 val templateDirectory = "addon_template"
 val pluginDependencies = arrayOf(
@@ -35,7 +37,7 @@ android {
         manifestPlaceholders["godotPluginName"] = pluginName
         manifestPlaceholders["godotPluginPackageName"] = pluginPackageName
         buildConfigField("String", "GODOT_PLUGIN_NAME", "\"${pluginName}\"")
-        setProperty("archivesBaseName", "$pluginName-$pluginVersion")
+        setProperty("archivesBaseName", "$pluginName")
     }
 
     compileOptions {
@@ -56,14 +58,14 @@ dependencies {
 val copyDebugAARToDemoAddons by tasks.registering(Copy::class) {
     description = "Copies the generated debug AAR binary to the plugin's addons directory"
     from("build/outputs/aar")
-    include("$pluginName-$pluginVersion-debug.aar")
+    include("$pluginName-debug.aar")
     into("$demoAddOnsDirectory/$pluginName/bin/debug")
 }
 
 val copyReleaseAARToDemoAddons by tasks.registering(Copy::class) {
     description = "Copies the generated release AAR binary to the plugin's addons directory"
     from("build/outputs/aar")
-    include("$pluginName-$pluginVersion-release.aar")
+    include("$pluginName-release.aar")
     into("$demoAddOnsDirectory/$pluginName/bin/release")
 }
 
@@ -99,8 +101,10 @@ val copyAddonsToDemo by tasks.registering(Copy::class) {
     filter(ReplaceTokens::class,
         "tokens" to mapOf(
             "pluginName" to pluginName,
+            "pluginNodeName" to pluginNodeName,
             "pluginVersion" to pluginVersion,
             "pluginPackage" to pluginPackageName,
+            "targetOs" to targetOs,
             "pluginDependencies" to dependencyString))
 }
 
