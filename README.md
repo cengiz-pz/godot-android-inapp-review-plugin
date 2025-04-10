@@ -1,3 +1,6 @@
+<p align="center">
+  <img width="256" height="256" src="demo/inappreview.png">
+</p>
 
 ---
 # ![](inappreview/addon_template/icon.png?raw=true) In-app Review Plugin
